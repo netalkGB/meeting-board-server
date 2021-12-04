@@ -1,0 +1,12 @@
+version: '3'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    volumes:
+      - ./src:/server
+      - /server/node_modules
+    ports:
+      - "3000:3000/tcp"
+    tty: true

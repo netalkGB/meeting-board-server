@@ -1,0 +1,16 @@
+FROM node:16-slim
+
+ENV TZ='Asia/Tokyo'
+ENV HOST=0.0.0.0
+
+RUN apt update && apt install -y chromium fonts-noto-cjk
+
+COPY ./src /server
+
+WORKDIR /server
+
+EXPOSE 3000 3000/tcp
+
+RUN yarn
+
+CMD ["yarn", "dev"]

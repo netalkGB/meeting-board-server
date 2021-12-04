@@ -1,0 +1,7 @@
+.DS_Store
+node_modules
+.nuxt
+.eslintcache
+yarn-error.log
+service-account-key.json
+appconfig.json
