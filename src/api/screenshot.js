@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer')
 export default async function (_req, res) {
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath: '/usr/bin/chromium',
     args: [
       '--no-sandbox'
     ]
